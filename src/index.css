@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,105 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Print styles for PDF export */
+@media print {
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+    color: black !important;
+    background: white !important;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+  
+  /* Ensure proper page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+  
+  /* Optimize spacing for print */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  
+  /* Ensure cards and sections stay together */
+  .print\:break-inside-avoid {
+    break-inside: avoid;
+  }
+  
+  /* Remove unnecessary margins for print */
+  .print\:m-0 {
+    margin: 0 !important;
+  }
+  
+  .print\:p-0 {
+    padding: 0 !important;
+  }
+  
+  /* Ensure proper text colors in print */
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  /* Make sure gradients print properly */
+  header {
+    background: #1e40af !important;
+    color: white !important;
+  }
+  
+  /* Optimize margins for print */
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+  
+  .max-w-4xl {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure proper line heights and spacing */
+  ul li {
+    margin-bottom: 4px;
+  }
+  
+  /* Card borders for print */
+  .border-l-4 {
+    border-left: 4px solid;
+  }
+  
+  .border-l-blue-600 {
+    border-left-color: #2563eb;
+  }
+  
+  .border-l-green-600 {
+    border-left-color: #16a34a;
+  }
+  
+  .border-l-purple-600 {
+    border-left-color: #9333ea;
+  }
+  
+  .border-l-orange-600 {
+    border-left-color: #ea580c;
+  }
+  
+  .border-l-red-600 {
+    border-left-color: #dc2626;
+  }
+  
+  .border-l-indigo-600 {
+    border-left-color: #4f46e5;
   }
 }
