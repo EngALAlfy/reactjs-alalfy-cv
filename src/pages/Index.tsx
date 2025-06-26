@@ -189,7 +189,7 @@ const Index = () => {
             </section>
 
             {/* Skills Section */}
-            <section className="mb-8">
+            <section className="mb-5">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2">Technical Skills</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
