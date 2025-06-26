@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50 pb-2">
       <div className="max-w-4xl mx-auto px-4">
         {/* Print/Download Button - Hidden in print */}
-        <div className="mb-8 print:hidden">
+        <div className="mb-6 print:hidden">
           <Button onClick={handleDownloadPDF} className="bg-blue-600 hover:bg-blue-700">
             <Download className="w-4 h-4 mr-2" />
             Download as PDF
@@ -24,11 +24,11 @@ const Index = () => {
         {/* Resume Content */}
         <div id="resume-content" className="bg-white shadow-lg print:shadow-none">
           {/* Header Section */}
-          <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8">
+          <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 print:break-inside-avoid">
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-2">Islam Hassan Abd Allah Alalfy</h1>
-              <h2 className="text-xl font-light mb-4">Senior Software Engineer</h2>
-              <p className="text-blue-100 mb-6">Cairo, Egypt</p>
+              <h2 className="text-xl font-light mb-3">Senior Software Engineer</h2>
+              <p className="text-blue-100 mb-4">Cairo, Egypt</p>
               
               {/* Contact Information */}
               <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -60,10 +60,10 @@ const Index = () => {
             </div>
           </header>
 
-          <div className="px-8 py-6">
+          <div className="px-6 py-4">
             {/* Professional Summary */}
-            <section className="mb-5">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Professional Summary</h3>
+            <section className="mb-4 print:break-inside-avoid">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-600 pb-2">Professional Summary</h3>
               <p className="text-gray-700 leading-relaxed">
                 Senior Software Engineer with 5+ years of experience in web and mobile development using Laravel, Flutter, and Node.js. 
                 Adept in DevOps, scalable architecture, team leadership, API integrations, and delivering large-scale SaaS platforms. 
@@ -73,21 +73,21 @@ const Index = () => {
             </section>
 
             {/* Work Experience */}
-            <section className="mb-5">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2">Work Experience</h3>
+            <section className="mb-4 print:break-inside-avoid">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Work Experience</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {/* Current Role */}
-                <Card className="border-l-4 border-l-blue-600">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
+                <Card className="border-l-4 border-l-blue-600 print:break-inside-avoid">
+                  <CardContent className="p-4">
+                    <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-800">Team Lead - Flutter & Laravel</h4>
                         <p className="text-blue-600 font-medium">Bakka Soft, Cairo</p>
                       </div>
                       <span className="text-gray-600 font-medium">Dec 2022 - Present</span>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
                       <li>Led a team of 4+ developers to deliver a mobile ordering system integrated with POS and kitchen display systems</li>
                       <li>Improved system performance to handle 3000+ concurrent users/min (up from &lt;1000) through Laravel and server-level optimizations</li>
                       <li>Reduced API response time from 5s to under 1s on mobile</li>
@@ -99,16 +99,16 @@ const Index = () => {
                 </Card>
 
                 {/* Senior Software Engineer */}
-                <Card className="border-l-4 border-l-green-600">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
+                <Card className="border-l-4 border-l-green-600 print:break-inside-avoid">
+                  <CardContent className="p-4">
+                    <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-800">Senior Software Engineer</h4>
                         <p className="text-green-600 font-medium">GRE Development, London (Remote)</p>
                       </div>
                       <span className="text-gray-600 font-medium">Feb 2024 - Oct 2024</span>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
                       <li>Developed a multi-vendor SaaS e-commerce platform serving 421,000+ merchants in Saudi Arabia</li>
                       <li>Integrated payment gateway and scalable Laravel backend</li>
                       <li>Built core modules for digital store builder, vendor management, and analytics dashboard</li>
@@ -118,9 +118,9 @@ const Index = () => {
                 </Card>
 
                 {/* Founder & Lead Developer */}
-                <Card className="border-l-4 border-l-purple-600">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
+                <Card className="border-l-4 border-l-purple-600 print:break-inside-avoid">
+                  <CardContent className="p-4">
+                    <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-800">Founder & Lead Developer</h4>
                         <p className="text-purple-600 font-medium">YoTech, Cairo</p>
@@ -128,7 +128,7 @@ const Index = () => {
                       </div>
                       <span className="text-gray-600 font-medium">Jan 2024 - Present</span>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
                       <li>Delivered 4+ e-commerce stores and a white-label SaaS platform to UAE clients</li>
                       <li>Managed 20+ full-stack projects covering mobile apps, dashboards, admin panels, and ERP integrations</li>
                       <li>Led development of a custom SaaS store generator for retail distribution</li>
@@ -138,48 +138,48 @@ const Index = () => {
                 </Card>
 
                 {/* Previous Roles */}
-                <Card className="border-l-4 border-l-orange-600">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
+                <Card className="border-l-4 border-l-orange-600 print:break-inside-avoid">
+                  <CardContent className="p-4">
+                    <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-800">Full Stack Developer</h4>
                         <p className="text-orange-600 font-medium">SPC Tech</p>
                       </div>
                       <span className="text-gray-600 font-medium">Dec 2023 - Feb 2024</span>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
                       <li>Developed a taxi app using Flutter with real-time location tracking and Firebase backend</li>
                       <li>Integrated driver and passenger workflows with cloud functions and real-time DB sync</li>
                     </ul>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-red-600">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
+                <Card className="border-l-4 border-l-red-600 print:break-inside-avoid">
+                  <CardContent className="p-4">
+                    <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-800">Full Stack Developer</h4>
                         <p className="text-red-600 font-medium">Knooz Misr</p>
                       </div>
                       <span className="text-gray-600 font-medium">Dec 2021 - Dec 2022</span>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
                       <li>Built a Laravel web system managing operations for 13 marble factories in Egypt</li>
                       <li>Designed dashboard for stock, orders, production, and inventory linking across locations</li>
                     </ul>
                   </CardContent>
                 </Card>
 
-                <Card className="border-l-4 border-l-indigo-600">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-start mb-3">
+                <Card className="border-l-4 border-l-indigo-600 print:break-inside-avoid">
+                  <CardContent className="p-4">
+                    <div className="flex justify-between items-start mb-2">
                       <div>
                         <h4 className="text-xl font-semibold text-gray-800">Remote Developer</h4>
                         <p className="text-indigo-600 font-medium">Arinanetwork</p>
                       </div>
                       <span className="text-gray-600 font-medium">Jun 2019 - Nov 2021</span>
                     </div>
-                    <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    <ul className="list-disc list-inside space-y-1 text-gray-700">
                       <li>Developed offline-compatible ERP system using Laravel and Vue</li>
                       <li>Implemented advanced source code hashing and sync engine</li>
                     </ul>
@@ -189,38 +189,38 @@ const Index = () => {
             </section>
 
             {/* Skills Section */}
-            <section className="mb-5">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2">Technical Skills</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+            <section className="mb-4 print:break-inside-avoid">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Technical Skills</h3>
+              <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">Backend Development</h4>
-                  <p className="text-gray-700 mb-4">Laravel, PHP, Node.js, MySQL</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Backend Development</h4>
+                  <p className="text-gray-700 mb-3">Laravel, PHP, Node.js, MySQL</p>
                   
-                  <h4 className="font-semibold text-gray-800 mb-3">Frontend Development</h4>
-                  <p className="text-gray-700 mb-4">Flutter, HTML, CSS, JavaScript, ReactJS, jQuery</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Frontend Development</h4>
+                  <p className="text-gray-700 mb-3">Flutter, HTML, CSS, JavaScript, ReactJS, jQuery</p>
                   
-                  <h4 className="font-semibold text-gray-800 mb-3">DevOps & Server</h4>
-                  <p className="text-gray-700 mb-4">Docker, GitHub Actions, Server Monitoring, CI/CD Pipelines, Ubuntu, Linux</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">DevOps & Server</h4>
+                  <p className="text-gray-700 mb-3">Docker, GitHub Actions, Server Monitoring, CI/CD Pipelines, Ubuntu, Linux</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">API Integration</h4>
-                  <p className="text-gray-700 mb-4">RESTful APIs, GraphQL, Custom AI APIs, Ollama Local API</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">API Integration</h4>
+                  <p className="text-gray-700 mb-3">RESTful APIs, GraphQL, Custom AI APIs, Ollama Local API</p>
                   
-                  <h4 className="font-semibold text-gray-800 mb-3">Payment Systems</h4>
-                  <p className="text-gray-700 mb-4">OPay, STC Pay (KSA), TELR (UAE), Paymob, FAWRY, KASHIER</p>
+                  <h4 className="font-semibold text-gray-800 mb-2">Payment Systems</h4>
+                  <p className="text-gray-700 mb-3">OPay, STC Pay (KSA), TELR (UAE), Paymob, FAWRY, KASHIER</p>
                   
-                  <h4 className="font-semibold text-gray-800 mb-3">Documentation</h4>
+                  <h4 className="font-semibold text-gray-800 mb-2">Documentation</h4>
                   <p className="text-gray-700">Deployment runbooks, API specs, onboarding guides</p>
                 </div>
               </div>
             </section>
 
             {/* Education & Personal Info */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <section>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Education</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <section className="print:break-inside-avoid">
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-600 pb-2">Education</h3>
                 <Card>
-                  <CardContent className="p-4">
+                  <CardContent className="p-3">
                     <h4 className="font-semibold text-gray-800">Bachelor of Science in Civil Engineering</h4>
                     <p className="text-gray-600">Al-Azhar University, Cairo</p>
                     <p className="text-gray-600">Graduated 2021</p>
@@ -228,10 +228,10 @@ const Index = () => {
                 </Card>
               </section>
 
-              <section>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Personal Information</h3>
+              <section className="print:break-inside-avoid">
+                <h3 className="text-2xl font-bold text-gray-800 mb-3 border-b-2 border-blue-600 pb-2">Personal Information</h3>
                 <Card>
-                  <CardContent className="p-4 space-y-2">
+                  <CardContent className="p-3 space-y-1">
                     <p><span className="font-medium">Nationality:</span> Egyptian</p>
                     <p><span className="font-medium">Marital Status:</span> Married</p>
                     <p><span className="font-medium">Military Service:</span> Completed</p>
