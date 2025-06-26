@@ -6,21 +6,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
-  const handleDownloadPDF = () => {
-    window.print();
-  };
-
   return (
     <div className="min-h-screen bg-gray-50 pb-2">
       <div className="max-w-4xl mx-auto px-4">
-        {/* Print/Download Button - Hidden in print */}
-        <div className="mb-6 print:hidden">
-          <Button onClick={handleDownloadPDF} className="bg-blue-600 hover:bg-blue-700">
-            <Download className="w-4 h-4 mr-2" />
-            Download as PDF
-          </Button>
-        </div>
-
         {/* Resume Content */}
         <div id="resume-content" className="bg-white shadow-lg print:shadow-none">
           {/* Header Section */}
