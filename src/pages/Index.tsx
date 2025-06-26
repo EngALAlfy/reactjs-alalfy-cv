@@ -11,7 +11,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gray-50 pb-2">
       <div className="max-w-4xl mx-auto px-4">
         {/* Print/Download Button - Hidden in print */}
         <div className="mb-8 print:hidden">
@@ -60,9 +60,9 @@ const Index = () => {
             </div>
           </header>
 
-          <div className="p-8">
+          <div className="px-8 py-6">
             {/* Professional Summary */}
-            <section className="mb-8">
+            <section className="mb-5">
               <h3 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">Professional Summary</h3>
               <p className="text-gray-700 leading-relaxed">
                 Senior Software Engineer with 5+ years of experience in web and mobile development using Laravel, Flutter, and Node.js. 
@@ -73,7 +73,7 @@ const Index = () => {
             </section>
 
             {/* Work Experience */}
-            <section className="mb-8">
+            <section className="mb-5">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-blue-600 pb-2">Work Experience</h3>
               
               <div className="space-y-6">
